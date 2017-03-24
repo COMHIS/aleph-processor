@@ -1,0 +1,5 @@
+.Rproj.*
+lib/bibliographica
+*.Rproj
+input/*.gz
+input/fennica*
