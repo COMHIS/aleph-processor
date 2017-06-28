@@ -3,3 +3,7 @@ lib/bibliographica
 *.Rproj
 input/*.gz
 input/fennica*
+.Rproj.user
+.RData
+.Rhistory
+output/*
