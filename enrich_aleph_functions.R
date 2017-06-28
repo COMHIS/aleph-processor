@@ -114,9 +114,11 @@ get_aleph_rows_260_content_new <- function(aleph_rows) {
 # only updates year now
 update_aleph_data_field_260 <- function(aleph_data) {
   row_nos <- get_aleph_row_nos_of_type(aleph_data, "260")
-  rows_to_update <- aleph_data[row_nos]
-  rows_new_content <- get_aleph_rows_260_content_new(rows_to_update)
-  # rows_new_content <- lapply(rows_to_update, get_aleph_row_260_content_new)
-  aleph_data[row_nos] <- rows_new_content
+  if (length(row_nos) > 0) {
+    rows_to_update <- aleph_data[row_nos]
+    rows_new_content <- get_aleph_rows_260_content_new(rows_to_update)
+    # rows_new_content <- lapply(rows_to_update, get_aleph_row_260_content_new)
+    aleph_data[row_nos] <- rows_new_content
+    }
   return(aleph_data)
 }

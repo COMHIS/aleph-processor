@@ -3,6 +3,7 @@ lib/bibliographica
 *.Rproj
 input/*.gz
 input/fennica*
+input/roskatesti.alephseq
 .Rproj.user
 .RData
 .Rhistory
