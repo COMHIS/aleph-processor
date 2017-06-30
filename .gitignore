@@ -8,3 +8,5 @@ input/roskatesti.alephseq
 .RData
 .Rhistory
 output/*
+packrat/lib*/
+packrat/src/

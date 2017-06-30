@@ -1,5 +1,6 @@
-library(devtools)
-load_all("lib/bibliographica/")
+# library(devtools)
+# load_all("lib/bibliographica/")
+library(bibliographica)
 
 
 get_aleph_row_type <- function(aleph_row) {
@@ -114,6 +115,7 @@ get_aleph_rows_260_content_new <- function(aleph_rows) {
 # only updates year now
 update_aleph_data_field_260 <- function(aleph_data) {
   row_nos <- get_aleph_row_nos_of_type(aleph_data, "260")
+  # just pass same data if no rows with 260 field
   if (length(row_nos) > 0) {
     rows_to_update <- aleph_data[row_nos]
     rows_new_content <- get_aleph_rows_260_content_new(rows_to_update)
